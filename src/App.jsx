@@ -5,6 +5,7 @@ import TaskPage from "./pages/TaskPage"
 import Nav from "./components/Nav"
 import { Button } from '@heroui/react';
 
+
 function App() {
   const navItems = [
     { label: "Dashboard", path: "/dashboard" },
@@ -13,13 +14,18 @@ function App() {
 
   return (
     <div>
+      {/* Navigation */}
+      <Nav links={navItems} />
       <Routes>
-        <Route path="/dashboard" element={ <Dashboard /> }/>
+        <Route path="/dashboard" element={ 
+          <Dashboard />
+        }
+        
+        />
         <Route path="/task" element={ <TaskPage /> } />
       </Routes>
 
-      {/* Navigation */}
-      <Nav links={navItems} />
+      
       
       
     </div>
