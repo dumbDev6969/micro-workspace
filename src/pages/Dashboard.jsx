@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Button from '../components/Button'
-import { Typography } from "@heroui/react";
-import { Card } from '@heroui/react';
+import { Typography, Card } from "@heroui/react";
+
 const Dashboard = ({ children }) => {
     const [isWorking, setIsWorking] = useState(true);
 
@@ -24,7 +24,7 @@ const Dashboard = ({ children }) => {
                     <p>{ isWorking ? 'Deep Work Mode Active' : 'On a Break' }</p>
                 </Card.Content>
             </Card>
-
+            <div>{ children }</div>
         </div>
     )
 }

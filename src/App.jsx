@@ -4,7 +4,7 @@ import Dashboard from "./pages/Dashboard"
 import TaskPage from "./pages/TaskPage"
 import Nav from "./components/Nav"
 import { Button } from '@heroui/react';
-
+import DynamicForm from './components/Form'
 
 function App() {
   const navItems = [
@@ -19,12 +19,17 @@ function App() {
       <Routes>
         <Route path="/dashboard" element={ 
           <Dashboard />
+
         }
         
         />
-        <Route path="/task" element={ <TaskPage /> } />
-      </Routes>
+        <Route path="/task" element={
+          <TaskPage />
 
+          } 
+        />
+      </Routes>
+        
       
       
       
